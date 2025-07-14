@@ -21,6 +21,8 @@
 - ✅ Outputs daily markdown digests for your community or team
 - ✅ Keeps your API keys and tokens safe (see `.gitignore`)
 
+To see the results, go to [https://github.com/drago-Codes/daily-ai-trends](https://github.com/drago-Codes/daily-ai-trends)
+
 ---
 
 ## 🚀 Features
