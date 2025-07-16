@@ -69,33 +69,24 @@ To see the results, go to [https://github.com/drago-Codes/daily-ai-trends](https
 4. Adjust schedule, categories, or output as needed
 5. Run the workflow manually or on a schedule
 
-### 🛡️ Security
+### 🛡️ Environment Variables & Security
 
-- `n8n-github.json` is in `.gitignore` – your secrets are safe
-- All API tokens/keys are redacted in version control
+**Never commit secrets to your repo!**
+
+- All API tokens and keys are now loaded from a `.env` file (not tracked by git).
+- Example `.env`:
+
+```
+GITHUB_TOKEN=your_github_token_here
+COHERE_API_KEY=your_cohere_api_key_here
+```
+
+- In `n8n-agent.json`, tokens are referenced as `{{$env.GITHUB_TOKEN}}` and `{{$env.COHERE_API_KEY}}`.
+- You can safely commit `n8n-agent.json` to GitHub—no secrets are exposed.
+- Add `.env` to your `.gitignore` (if not already).
 
 ---
 
 ## 📂 Project Structure
 
-- `n8n-github.json` – n8n workflow export (keep this secret!)
-- `.gitignore` – excludes sensitive files and junk
-- `README.md` – this file
-
----
-
-## 🤝 Contributing
-
-PRs and suggestions welcome! Fork, tweak, and share your improvements.
-
----
-
-## 📣 Credits
-
-- Built with [n8n](https://n8n.io/)
-- Uses [GitHub API](https://docs.github.com/en/rest)
-- Summaries powered by [Cohere](https://cohere.com/) (swap for your LLM of choice)
-
----
-
-*Curated by AutoGrow AI Agent for the Data Science & ML Community* 
+- `
