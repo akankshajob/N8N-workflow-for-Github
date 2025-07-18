@@ -13,13 +13,13 @@
 
 ## ✨ Overview
 
-**AutoGrow AI/ML GitHub Trends Workflow** is a production-ready n8n automation that:
+*AutoGrow AI/ML GitHub Trends Workflow* is a production-ready n8n automation that:
 
 - ✅ Fetches trending AI/ML/Data Science repos from GitHub
 - ✅ Categorizes by ML, DL, NLP, CV, Data Science, and more
 - ✅ Generates technical summaries using LLMs (Cohere, etc.)
 - ✅ Outputs daily markdown digests for your community or team
-- ✅ Keeps your API keys and tokens safe (see `.gitignore`)
+- ✅ Keeps your API keys and tokens safe (see .gitignore)
 
 To see the results, go to [https://github.com/drago-Codes/daily-ai-trends](https://github.com/drago-Codes/daily-ai-trends)
 
@@ -27,21 +27,21 @@ To see the results, go to [https://github.com/drago-Codes/daily-ai-trends](https
 
 ## 🚀 Features
 
-- 🤖 **Automated GitHub Search** – Finds new, high-star AI/ML repos daily
-- 🧠 **Smart Categorization** – Tags repos by ML, DL, NLP, CV, etc.
-- 📝 **LLM Summaries** – Uses Cohere or similar LLMs for concise, technical writeups
-- 📅 **Batch Digest** – Produces a markdown summary for easy sharing
-- 🔒 **Token Redaction** – Sensitive keys are never committed (see `.gitignore`)
-- ⚡ **n8n Workflow** – Fully visual, customizable, and extendable
+- 🤖 *Automated GitHub Search* – Finds new, high-star AI/ML repos daily
+- 🧠 *Smart Categorization* – Tags repos by ML, DL, NLP, CV, etc.
+- 📝 *LLM Summaries* – Uses Cohere or similar LLMs for concise, technical writeups
+- 📅 *Batch Digest* – Produces a markdown summary for easy sharing
+- 🔒 *Token Redaction* – Sensitive keys are never committed (see .gitignore)
+- ⚡ *n8n Workflow* – Fully visual, customizable, and extendable
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 | Layer         | Technology         |
 |---------------|-------------------|
-| ⚙️ Workflow   | n8n (JSON export)  |
-| 🗃️ Data Source | GitHub API         |
+| ⚙ Workflow   | n8n (JSON export)  |
+| 🗃 Data Source | GitHub API         |
 | 🧠 AI Engine  | Cohere LLM (or swap for OpenAI, etc.) |
 | 📄 Output     | Markdown digests   |
 | 🔒 Security   | .gitignore, token redaction |
@@ -64,29 +64,36 @@ To see the results, go to [https://github.com/drago-Codes/daily-ai-trends](https
 ### 🔧 Import into n8n
 
 1. Open your n8n instance
-2. Import `n8n-github.json` (File > Import from File)
+2. Import n8n-github.json (File > Import from File)
 3. Set up your GitHub and Cohere (or LLM) API credentials in n8n
 4. Adjust schedule, categories, or output as needed
 5. Run the workflow manually or on a schedule
 
-### 🛡️ Environment Variables & Security
+### 🛡 Environment Variables & Security
 
-**Never commit secrets to your repo!**
+*Never commit secrets to your repo!*
 
-- All API tokens and keys are now loaded from a `.env` file (not tracked by git).
-- Example `.env`:
+- All API tokens and keys are now loaded from a .env file (not tracked by git).
+- Example .env:
 
-```
+
 GITHUB_TOKEN=your_github_token_here
 COHERE_API_KEY=your_cohere_api_key_here
-```
 
-- In `n8n-agent.json`, tokens are referenced as `{{$env.GITHUB_TOKEN}}` and `{{$env.COHERE_API_KEY}}`.
-- You can safely commit `n8n-agent.json` to GitHub—no secrets are exposed.
-- Add `.env` to your `.gitignore` (if not already).
+
+- In n8n-agent.json, tokens are referenced as {{$env.GITHUB_TOKEN}} and {{$env.COHERE_API_KEY}}.
+- You can safely commit n8n-agent.json to GitHub—no secrets are exposed.
+- Add .env to your .gitignore (if not already).
 
 ---
 
 ## 📂 Project Structure
 
-- `
+- n8n-agent.json – n8n workflow export (safe to commit, no secrets)
+- .env – API tokens and keys (never commit this)
+- .gitignore – excludes sensitive files and junk
+- README.md – this file
+- workflow.png – workflow diagram
+- goof – (unknown, user file)
+
+---
