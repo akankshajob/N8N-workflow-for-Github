@@ -89,4 +89,11 @@ COHERE_API_KEY=your_cohere_api_key_here
 
 ## 📂 Project Structure
 
-- `
+- n8n-agent.json – workflow export (safe to commit, no secrets)
+- .env – API tokens and keys (never commit this)
+- .gitignore – excludes sensitive files and junk
+- README.md – this file
+- workflow.png – workflow diagram
+- goof – (unknown, user file)
+
+---
